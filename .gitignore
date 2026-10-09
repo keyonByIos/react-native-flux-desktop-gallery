@@ -11,3 +11,8 @@ gpu-grab-v2/
 .vreg/shots/
 .vreg/diffs/
 .vreg/baselines/
+
+# FFI 随包原生库：只保留 .dll，链接器副产物 .exp/.lib 属可重生噪声（native-demo\build.bat 会重生成）
+assets/native/*.exp
+assets/native/*.lib
+native-demo/*.obj

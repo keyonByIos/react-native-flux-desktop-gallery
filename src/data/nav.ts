@@ -21,6 +21,7 @@ export const NAV_SYSTEM: MenuItem[] = [
   { key: 'sys-kv', icon: 'database2', label: '键值持久化 KV Store' },
   { key: 'sys-log', icon: 'fileText', label: '日志 Logger' },
   { key: 'sys-tray', icon: 'bell', label: '系统托盘 Tray' },
+  { key: 'sys-ffi', icon: 'cpu', label: '原生库调用 FFI' },
   {
     key: 'sys-methods',
     icon: 'cpu',

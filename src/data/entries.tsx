@@ -145,6 +145,7 @@ import { SysLogDemo } from '../demos/sys-log';
 import { SysTrayDemo } from '../demos/sys-tray';
 import { SysMethodsDemo } from '../demos/sys-methods';
 import { WebViewDemo } from '../demos/webview';
+import { FfiDemo } from '../demos/ffi';
 
 /** 顶部主题控制维度（Shell → buildEntries 透传给 ThemeDemo） */
 export type ThemeCtl = {
@@ -359,6 +360,7 @@ export function buildEntries(ctl: ThemeCtl): Record<string, Entry> {
     'coin-icon': { title: '币种图标 CoinIcon', desc: '内置常见币种矢量图形（取自 @ant-design/web3 icons，多色图层堆叠）；ticker 别名/尺寸/圆形方形底牌/未内置字母牌兜底', node: <CoinIconDemo /> },
     'file-picker': { title: '文件选择器 FilePicker', desc: 'I/O 输入：点击唤起原生系统对话框 + 从资源管理器拖拽文件入窗（底座 DroppedFile）；多选/扩展名过滤/拖拽区与按钮两形态/文件大小回显与逐项移除', node: <IoFilePickerDemo /> },
     'file-saver': { title: '文件保存器 FileSaver', desc: 'I/O 输出：点击唤起原生「另存为」对话框（PowerShell SaveFileDialog，同款 UTF-8 回传绕 GBK 坑）选目标路径 → fs 写盘；内容支持 string/Buffer/Uint8Array/dataURL 或懒函数（点击时才生成）；保存中/成功回显路径/失败回显错误三态', node: <IoFileSaverDemo /> },
+    'sys-ffi': { title: '原生库调用 FFI', desc: '独立可选分支包 react-native-flux-desktop-ffi（napi-rs + libloading + libffi）：以声明式签名 ffi.sym(句柄,符号名,参数类型[],返回类型) 直接把系统 DLL/dylib/so 的 C 导出当成可调用闭包，无需写 C/Rust。演示标量调用（GetTickCount/GetCurrentProcessId）、内存原语往返（alloc/writeBytes/readBytes/free）、输出缓冲区回读（GetModuleFileNameW 取本进程 EXE 路径）、异步调用（{async:true} 丢 libuv 线程返回 Promise）、native 回调（EnumWindows 把 JS 闭包当函数指针）。仅 C ABI，签名写错即段错误直崩，故按钮均为 Windows 真实调用、非 win32 平台自动跳过', node: <FfiDemo /> },
     webview: { title: '网页视图 WebView', desc: '独立分支包 react-native-flux-desktop-webview（Chromium/WebView2）：非主包内置，需以 file: 本地依赖单独引入。点按钮开一扇顶层网页窗、setInterval 持续 pump 驱动渲染（本步只做独立开窗，区域嵌入与事件循环共享待后续）', node: <WebViewDemo /> },
   };
 }

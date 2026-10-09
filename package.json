@@ -23,6 +23,7 @@
     "react-native-flux-desktop": "file:../react-native-flux-desktop",
     "react-native-flux-desktop-chart": "file:../react-native-flux-desktop-chart",
     "react-native-flux-desktop-dev": "file:../react-native-flux-desktop-dev",
+    "react-native-flux-desktop-ffi": "file:../react-native-flux-desktop-ffi",
     "react-native-flux-desktop-pro": "file:../react-native-flux-desktop-pro",
     "react-native-flux-desktop-web3": "file:../react-native-flux-desktop-web3",
     "react-native-flux-desktop-webview": "file:../react-native-flux-desktop-webview"
