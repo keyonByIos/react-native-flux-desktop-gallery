@@ -22,6 +22,7 @@ import { MailDemo } from '../cases/mail';
 import { CheckoutDemo } from '../cases/checkout';
 import { SettingsDemo } from '../cases/settings';
 import { TerminalPanelDemo } from '../cases/terminal';
+import { DbMysqlDemo } from '../cases/db-mysql';
 import { DevToolkitDemo } from '../cases/dev-toolkit';
 import { AdminCrudDemo } from '../cases/admin-crud';
 import { TaskManagerDemo } from '../cases/task-manager';
@@ -167,6 +168,15 @@ const CASES: CaseDef[] = [
     icon: 'code',
     desc: '会话管理器式终端面板：左会话列表（本地 PowerShell / CMD、SSH 主机、只读部署日志），右当前终端主体；复用库自绘终端组件族 LiveTerminal（node-pty 真 shell）/ SshTerminal（ssh2 远程）/ Terminal（七色语义日志），VT 网格屏 + SGR 配色，终端 App 惯例恒深色。',
     node: <TerminalPanelDemo />,
+    padding: 0,
+    scroll: false,
+  },
+  {
+    key: 'db-mysql',
+    title: '本地数据库查询 MySQL',
+    icon: 'database2',
+    desc: 'sequelize + mysql2 连本机 MySQL（默认 127.0.0.1:3306 root）：左连接表单，右 SQL 编辑区 + 一键快选查询（SHOW DATABASES / 版本时间 / information_schema 表 / mysql.user）+ 结果表格；真实联网执行、耗时/行数回显，连不上或依赖缺失优雅降级。亦作打包回归用例（纯 JS 依赖整包落盘）。',
+    node: <DbMysqlDemo />,
     padding: 0,
     scroll: false,
   },

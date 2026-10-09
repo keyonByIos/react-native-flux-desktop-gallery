@@ -230,6 +230,7 @@ export const NAV_CASE: MenuItem[] = [
   { key: 'checkout', icon: 'shoppingCart', label: '购物车结算 Checkout' },
   { key: 'settings', icon: 'setting', label: '系统设置 Settings' },
   { key: 'terminal', icon: 'code', label: '终端 / SSH 面板 Terminal' },
+  { key: 'db-mysql', icon: 'database2', label: '本地数据库查询 MySQL' },
 ];
 
 // 「开发」：面向开发者工具的组件。

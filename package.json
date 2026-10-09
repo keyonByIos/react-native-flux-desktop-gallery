@@ -19,6 +19,7 @@
   "dependencies": {
     "ethers": "^5.7.2",
     "lunar-typescript": "^1.8.6",
+    "mysql2": "^3.24.5",
     "node-pty": "^1.1.0",
     "react": "18.3.1",
     "react-native-flux-desktop": "file:../react-native-flux-desktop",
@@ -27,7 +28,8 @@
     "react-native-flux-desktop-ffi": "file:../react-native-flux-desktop-ffi",
     "react-native-flux-desktop-pro": "file:../react-native-flux-desktop-pro",
     "react-native-flux-desktop-web3": "file:../react-native-flux-desktop-web3",
-    "react-native-flux-desktop-webview": "file:../react-native-flux-desktop-webview"
+    "react-native-flux-desktop-webview": "file:../react-native-flux-desktop-webview",
+    "sequelize": "^6.37.8"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",

@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "pack": {
     "mode": "sea",
-    "nativeLibs": ["assets/native/flux-demo.dll"]
+    "nativeLibs": ["assets/native/flux-demo.dll"],
+    "nativePackages": ["sequelize", "mysql2"]
   },
   "maxDpr": 2,
   "icon": "assets/icon.png",

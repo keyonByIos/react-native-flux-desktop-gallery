@@ -59,6 +59,7 @@ import { MailDemo } from '../cases/mail';
 import { CheckoutDemo } from '../cases/checkout';
 import { SettingsDemo } from '../cases/settings';
 import { TerminalPanelDemo } from '../cases/terminal';
+import { DbMysqlDemo } from '../cases/db-mysql';
 import { DevToolkitDemo } from '../cases/dev-toolkit';
 import { AdminCrudDemo } from '../cases/admin-crud';
 import { TaskManagerDemo } from '../cases/task-manager';
@@ -246,6 +247,7 @@ export function buildEntries(ctl: ThemeCtl): Record<string, Entry> {
         'checkout': { title: '购物车结算 Checkout', desc: '左购物车条目（封面/规格/单价/数量 InputNumber/小计/删除），右订单摘要（优惠券 FLUX10 打 9 折 / 商品小计 / 运费 / 满 ¥99 免邮进度 / 合计 / 去结算）；改数量、删条目、券码实时联动，全走 token 明暗自适应', node: <CheckoutDemo /> },
         'settings': { title: '系统设置 Settings', desc: '左分组导航（通用/外观/通知/隐私/高级）、右受控控件区：Select 语言、Switch 开关、Slider 缩放/圆角/缓存、Segmented 主题、Radio 通知方式、主题色块、恢复默认；全真实本地受控，全走 token 明暗自适应', node: <SettingsDemo /> },
     'terminal': { title: '终端 / SSH 面板 Terminal', desc: '会话管理器式终端面板：左会话列表（本地 PowerShell / CMD、SSH 主机、只读部署日志），右当前终端主体；复用库自绘终端组件族 LiveTerminal（node-pty 真 shell）/ SshTerminal（ssh2 远程）/ Terminal（七色语义日志），VT 网格屏 + SGR 配色，终端 App 惯例恒深色', node: <TerminalPanelDemo /> },
+    'db-mysql': { title: '本地数据库查询 MySQL', desc: 'sequelize + mysql2 连本机 MySQL（默认 127.0.0.1:3306 root）：左连接表单（主机/端口/用户/密码/库），右 SQL 编辑区 + 一键快选查询（SHOW DATABASES / 版本时间 / information_schema 表 / mysql.user）+ 结果表格；真实联网执行、耗时/行数回显，连不上或依赖缺失优雅降级。亦作打包回归用例：纯 JS 依赖经 esbuild 内联进 app.cjs，验证「新增真实 npm 依赖→打包→打包环境仍可 require 联网查询」主链路', node: <DbMysqlDemo /> },
             'dev-toolkit': { title: '开发者工具箱 Dev Toolkit', desc: '左工具导航 + 右主体，一次性秀出库自绘整族 dev 组件：CodeBlock 多语言高亮 / Markdown 渲染 / JsonViewer 可折叠树 / DiffViewer 双栏对比 / RegexTester 实时匹配 / CronParser 触发预览 / TimeConverter 时间戳 / LogViewer 分级日志 / CommandPalette 命令面板，明暗自适应', node: <DevToolkitDemo /> },
     'admin-crud': { title: '管理后台 · 用户管理 Admin CRUD', desc: 'KPI 概览条 + 搜索/状态/部门受控筛选 + 批量选择 + 万行虚拟化表格(Table virtual) + 列排序 + 语义状态 Tag + 右侧 Descriptions 详情主从面板，全本地确定性数据，明暗自适应', node: <AdminCrudDemo /> },
     'task-manager': { title: '任务管理器 Task Manager', desc: '对标 Windows 任务管理器：Segmented 切进程/性能两视图——进程=虚拟化万级进程表(CPU/内存/磁盘/网络列排序 + 行选联动摘要)，性能=CPU/内存/磁盘/网络环形占用 + 历史面积曲线 + Top 进程柱状，明暗自适应', node: <TaskManagerDemo /> },
