@@ -28,6 +28,7 @@ export const NAV_SYSTEM: MenuItem[] = [
     label: '系统方法',
     children: [
       { key: 'sys-stats', label: '系统取数 SystemStats' },
+      { key: 'sys-constants', label: '系统常量 SystemConstants' },
     ],
   },
 ];
@@ -228,6 +229,7 @@ export const NAV_CASE: MenuItem[] = [
   { key: 'mail', icon: 'mail', label: '邮件客户端 Mail' },
   { key: 'checkout', icon: 'shoppingCart', label: '购物车结算 Checkout' },
   { key: 'settings', icon: 'setting', label: '系统设置 Settings' },
+  { key: 'terminal', icon: 'code', label: '终端 / SSH 面板 Terminal' },
 ];
 
 // 「开发」：面向开发者工具的组件。

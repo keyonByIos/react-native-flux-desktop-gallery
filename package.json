@@ -19,6 +19,7 @@
   "dependencies": {
     "ethers": "^5.7.2",
     "lunar-typescript": "^1.8.6",
+    "node-pty": "^1.1.0",
     "react": "18.3.1",
     "react-native-flux-desktop": "file:../react-native-flux-desktop",
     "react-native-flux-desktop-chart": "file:../react-native-flux-desktop-chart",

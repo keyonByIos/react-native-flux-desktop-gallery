@@ -144,6 +144,7 @@ import { SysKvDemo } from '../demos/sys-kv';
 import { SysLogDemo } from '../demos/sys-log';
 import { SysTrayDemo } from '../demos/sys-tray';
 import { SysMethodsDemo } from '../demos/sys-methods';
+import { SysConstantsDemo } from '../demos/sys-constants';
 import { WebViewDemo } from '../demos/webview';
 import { FfiDemo } from '../demos/ffi';
 
@@ -178,6 +179,7 @@ export function buildEntries(ctl: ThemeCtl): Record<string, Entry> {
     'sys-log': { title: '日志 Logger', desc: '自研双层日志：系统日志（核心自动写 + console 捕获、不可干预）与用户日志（默认允许直写）分离；dataDir()/logs 下日期+分片、单文件 1MB 轮转、app.json.logger 配目录/级别', node: <SysLogDemo /> },
     'sys-tray': { title: '系统托盘 Tray', desc: '自研底座无托盘 API→原生 tray-icon 接通知区图标；不挂原生菜单（只跟系统明暗），改自绘无边框置顶主题菜单弹窗。详解显示逻辑（无 alpha 露黑→窗口高=内容高、几何全常量、圆角垫色、关闭三径）、定位逻辑（物理 rect÷scale→逻辑、右缘对齐、夹屏内）、跨平台差异（Win/mac/Linux 各后端事件与 rect 支持）、Dock/任务栏不在底怎么算，并列出未实现/已知问题', node: <SysTrayDemo /> },
     'sys-stats': { title: '系统取数 SystemStats', desc: '把内存监控面板的取数逻辑抽成可随时调用的类：systemStats 单例聚合 进程内存 / 图片解码缓存 / 运行时长 / 逐窗渲染面 / 帧率 / GC，全部即时快照、无内部定时器；MemMonitor 面板内部亦消费本类，二者永远同源', node: <SysMethodsDemo /> },
+    'sys-constants': { title: '系统常量 SystemConstants', desc: '与 SystemStats 互补的「启动即定、运行期不变」环境事实：systemConstants 单例聚合 平台/架构/操作系统/主机名/用户会话/CPU 型号与核数/整机内存/Node·V8·uv·napi·openssl·ABI 版本/进程 pid·ppid·execPath/时区·区域·语言，纯 os + process 无原生依赖、每字段 safe() 兜底、模块加载时算一次并 Object.freeze；附 systemConstantsJSON() 一键序列化，demo 里按维度铺卡片并可复制全表', node: <SysConstantsDemo /> },
     theme: { title: '主题 Theme', desc: '外观（明/暗）× 密度（紧凑/宽松）× 主色 三个正交维度可叠加 —— token 是唯一事实来源', node: <ThemeDemo {...ctl} /> },
     transform: { title: '变换 Transform', desc: '绘制期 2D 变换：translate/scale/rotate/skew + transformOrigin + 子树继承 + 入场组件', node: <TransformDemo /> },
     animation: { title: '动效 Animation', desc: '动画库全景：交互弹簧 + 缓动曲线可视化 + 弹簧实验室 + Stagger 错峰 + Transition 进出场 + 预设墙 + 序列编排 + FLIP', node: <AnimationDemo /> },
