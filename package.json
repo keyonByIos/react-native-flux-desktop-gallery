@@ -1,6 +1,6 @@
 {
   "name": "react-native-flux-desktop-gallery",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "private": true,
   "description": "Gallery demo app for react-native-flux-desktop — consumes it as an installed package (import { Button } from 'react-native-flux-desktop').",
   "main": "dist/App.js",

@@ -2,7 +2,7 @@
 
 > 🖼️ 整个 `react-native-flux-desktop` 生态的可交互 demo 总览 —— 100+ 组件示例、图表、Web3、开发工具与整站案例，全部由自绘栈渲染（无浏览器）。
 
-![版本](https://img.shields.io/badge/version-0.1.0-blue) ![类型](https://img.shields.io/badge/demo%20应用-ff69b4) ![运行时](https://img.shields.io/badge/%E7%BA%AFReact%C2%B7%E5%8E%9F%E7%94%9F%E5%83%8F%E7%B4%A0%C2%B7%E9%9D%9EElectron-8a2be2)
+![版本](https://img.shields.io/badge/version-0.1.3-blue) ![类型](https://img.shields.io/badge/demo%20应用-ff69b4) ![运行时](https://img.shields.io/badge/%E7%BA%AFReact%C2%B7%E5%8E%9F%E7%94%9F%E5%83%8F%E7%B4%A0%C2%B7%E9%9D%9EElectron-8a2be2)
 
 **消费：** `react-native-flux-desktop`（核心）· `-chart` · `-dev` · `-pro` · `-web3` · `-webview` —— 均以 `file:../…` 本地依赖接入，因此本应用就是"这些包如何组合成真实界面"的参考实现。
 

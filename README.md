@@ -3,7 +3,7 @@
 > ️ The browsable demo showcase for the whole `react-native-flux-desktop` ecosystem — 100+ component demos, charts, Web3 widgets, dev tools and full-app case studies, all rendered by the self-drawn stack (no browser).
 > 🖼️ 整个 `react-native-flux-desktop` 生态的可交互 demo 总览 —— 100+ 组件示例、图表、Web3、开发工具与整站案例，全部由自绘栈渲染（无浏览器）。
 
-![version](https://img.shields.io/badge/version-0.1.0-blue) ![type](https://img.shields.io/badge/demo%20app-ff69b4) ![runtime](https://img.shields.io/badge/pure%20React%C2%B7native%20pixels%C2%B7no%20Electron-8a2be2)
+![version](https://img.shields.io/badge/version-0.1.3-blue) ![type](https://img.shields.io/badge/demo%20app-ff69b4) ![runtime](https://img.shields.io/badge/pure%20React%C2%B7native%20pixels%C2%B7no%20Electron-8a2be2)
 
 **Consumes / 消费：** `react-native-flux-desktop` (core) · `-chart` · `-dev` · `-pro` · `-web3` · `-webview` — wired up as `file:../…` local deps, so this app is the reference for how the packages compose in real screens.
 
