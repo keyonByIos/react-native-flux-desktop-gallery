@@ -1,0 +1,36 @@
+{
+  "name": "react-native-flux-desktop-gallery",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gallery demo app for react-native-flux-desktop — consumes it as an installed package (import { Button } from 'react-native-flux-desktop').",
+  "main": "dist/App.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && set FLUX_PACKAGED=1&& set FLUX_APP_DIR=ReactNativeFluxDesktopGallery&& node dist/App.js",
+    "dev": "node scripts/dev.js",
+    "gpu": "tsc && set FLUX_GPU=1&& set FLUX_PACKAGED=1&& set FLUX_APP_DIR=ReactNativeFluxDesktopGallery&& node dist/App.js",
+    "pack": "flux-pack",
+    "dist": "node tools/make-dist.js",
+    "vreg": "node tools/vreg.js",
+    "vreg:update": "node tools/vreg.js update",
+    "vreg:all": "node tools/vreg.js --all",
+    "install:local": "npm install --install-links"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "lunar-typescript": "^1.8.6",
+    "react": "18.3.1",
+    "react-native-flux-desktop": "file:../react-native-flux-desktop",
+    "react-native-flux-desktop-chart": "file:../react-native-flux-desktop-chart",
+    "react-native-flux-desktop-dev": "file:../react-native-flux-desktop-dev",
+    "react-native-flux-desktop-pro": "file:../react-native-flux-desktop-pro",
+    "react-native-flux-desktop-web3": "file:../react-native-flux-desktop-web3",
+    "react-native-flux-desktop-webview": "file:../react-native-flux-desktop-webview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.3.12",
+    "react-native-flux-desktop-packer": "file:../react-native-flux-desktop-packer",
+    "typescript": "^5.4.5"
+  }
+}

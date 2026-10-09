@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- 相对资源：证明 openFile / file:// 加载同目录相对 css 在打包后同样可用 -->
+  <link rel="stylesheet" href="bridge-demo.css" />
+  <title>Flux 本地页面</title>
+</head>
+<body>
+  <span class="badge">来自随包文件 · assets/webview/bridge-demo.html</span>
+  <h3>本地 HTML（随包 + 双向桥）</h3>
+  <p>本页作为<b>真实文件</b>随应用打包；RN 经 <code>openFile</code>/file:// 加载它，
+     上方的深色卡片样式即来自同目录的 <code>bridge-demo.css</code>（相对资源能生效）。
+     桥注入脚本会自动装好 <code>window.fluxBridge</code>。</p>
+  <button onclick="send()">发给 RN（fluxBridge.post）</button>
+  <button onclick="reqData()">向 RN 请求数据（fluxBridge.request 应答）</button>
+  <button onclick="openNew()">试开新窗（应被抑制并回抛 RN）</button>
+  <h3>收到 RN：</h3>
+  <pre id="rx">（等 RN 发来）</pre>
+  <h3>RN 应答 request：</h3>
+  <pre id="rp">（暂无）</pre>
+  <h3>生命周期：</h3>
+  <pre id="lc">…</pre>
+  <script>
+    function send() {
+      window.fluxBridge.post({ from: 'fileHtml', text: '来自随包本地文件的消息 ' + Math.round(Math.random() * 1000) });
+    }
+    function reqData() {
+      document.getElementById('rp').textContent = '请求中…';
+      window.fluxBridge.request({ cmd: 'getData' }).then(function (r) {
+        document.getElementById('rp').textContent = '应答：' + JSON.stringify(r);
+      }).catch(function (e) {
+        document.getElementById('rp').textContent = '失败：' + e;
+      });
+    }
+    function openNew() { window.open('https://example.com', '_blank'); }
+    window.onFluxMessage = function (data) {
+      document.getElementById('rx').textContent = typeof data === 'string' ? data : JSON.stringify(data);
+    };
+    window.addEventListener('flux:lifecycle', function (e) {
+      document.getElementById('lc').textContent += e.detail + '  ';
+    });
+  </script>
+</body>
+</html>

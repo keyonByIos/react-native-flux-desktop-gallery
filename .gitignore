@@ -1,0 +1,13 @@
+node_modules/
+dist/
+
+# 构建/运行/抓帧的本地产物（demo 仓无需入库）
+output/
+gpu-grab-fix/
+gpu-grab-v2/
+*.log
+
+# 视觉回归：本次抓取与差异高亮是临时产物；基线 baselines/ 体积大且属本地比对用，一并忽略
+.vreg/shots/
+.vreg/diffs/
+.vreg/baselines/

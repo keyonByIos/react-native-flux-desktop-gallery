@@ -1,0 +1,27 @@
+{
+  "name": "React-Native-Flux-Desktop Gallery",
+  "description": "react-native-flux-desktop 组件总览 Gallery —— 以已安装包的形式消费，展示系统/组件/高阶/Web3/开发/图表/案例各段 demo。",
+  "version": "0.1.0",
+  "pack": {
+    "mode": "sea"
+  },
+  "maxDpr": 2,
+  "icon": "assets/icon.png",
+  "defaultFont": "",
+  "fonts": [
+    { "family": "黑体", "file": "C:/Windows/Fonts/simhei.ttf" },
+    { "family": "楷体", "file": "C:/Windows/Fonts/simkai.ttf" },
+    { "family": "仿宋", "file": "C:/Windows/Fonts/simfang.ttf" },
+    { "family": "幼圆", "file": "C:/Windows/Fonts/SIMLI.TTF" },
+    { "family": "华文行楷", "file": "C:/Windows/Fonts/STXINGKA.TTF" },
+    { "family": "Arial", "file": "C:/Windows/Fonts/arial.ttf", "bold": "C:/Windows/Fonts/arialbd.ttf" },
+    { "family": "Consolas", "file": "C:/Windows/Fonts/consola.ttf" }
+  ],
+  "allowMultiOpen": true,
+  "logger": {
+    "path": "",
+    "level": "debug"
+  },
+  "main": "dist/App.js",
+  "output": "output"
+}
